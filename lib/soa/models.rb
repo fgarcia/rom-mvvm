@@ -4,12 +4,27 @@
 # with this central definition
 #
 # ??? How to reference this from all other definitions ???
-# ... such feature looks more useful for documentation than code
+#   - for documentation, graph generation
+#   - assign default attribute type of other models related with this one
 #
 class Customer
   include Virtus.model
 
+  attribute :id, String
   attribute :name, String
+  attribute :email, String
+  attribute :address, String
+  attribute :phone, String
+end
+
+# Proyection of Customer
+class CustomerRow
+  # ... only the properties shown in a table of 'Customer' objects
+  attribute :name, String
+end
+
+class CustomerDetails
+  # ... only the properties shown in a detailed view of 'Customer' objects
 end
 
 # Transformation of Customer 

@@ -1,0 +1,43 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adamantium (0.2.0)
+      ice_nine (~> 0.11.0)
+      memoizable (~> 0.4.0)
+    addressable (2.3.6)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    charlatan (0.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concord (0.1.5)
+      adamantium (~> 0.2.0)
+      equalizer (~> 0.0.9)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.9)
+    ice_nine (0.11.0)
+    inflecto (0.0.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    rom (0.4.0)
+      addressable (~> 2.3)
+      charlatan (~> 0.1, >= 0.1)
+      concord (~> 0.1, >= 0.1.4)
+      equalizer (~> 0.0, >= 0.0.9)
+      inflecto (~> 0.0, >= 0.0.2)
+    thread_safe (0.3.4)
+    virtus (1.0.3)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rom
+  virtus

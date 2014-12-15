@@ -3,6 +3,12 @@
 # Single model class of this example. All other 'models' are directly related
 # with this central definition
 #
+# In DDD this is an Entity or an Aggregate Root. The object that should have
+# model logic. 
+#
+# All other related models will normally be read-only projections and share the
+# same ID field
+#
 # ??? How to reference this from all other definitions ???
 #   - for documentation, graph generation
 #   - assign default attribute type of other models related with this one
@@ -18,13 +24,23 @@ class Customer
 end
 
 # Proyection of Customer
+#
+# Properties shown in each row of a table of 'Customer' objects
+#
+# This is not always one result of Customer.all, in a CQRS style this might be
+# a single result of an indexed view, where only the needed fields are
+# listed. Technically there might be as many proyection-models as views of
+# the same Customer are needed
+#
+# Plain view-model object, mostly attributes without much logic, if any.
+#
 class CustomerRow
-  # ... only the properties shown in a table of 'Customer' objects
   attribute :name, String
 end
 
 class CustomerDetails
-  # ... only the properties shown in a detailed view of 'Customer' objects
+  # only the properties shown in a detailed view of 'Customer' objects
+  # Same type of class as 'CustomerRow' 
 end
 
 # Transformation of Customer 

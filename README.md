@@ -11,19 +11,19 @@ to have one central class representing users but several model views of them.
 As an example, given a central UserEntity class, we might need several related
 model representations like:
 
-  UserLoginModel
-  UserSignupModel
-  UserProfileModel
-  UserSettingsModel
-  UserDetailsModel
-  UserSummaryModel
-  UserApiModel
+    UserLoginModel
+    UserSignupModel
+    UserProfileModel
+    UserSettingsModel
+    UserDetailsModel
+    UserSummaryModel
+    UserApiModel
 
 All these models are related either with a single form, view or service. That
 is the origin of the ViewModel concept of MVVM: one model for each view (or
 usage) of your data. 
 
-I used the suffix Entity to emphasize that a UserEntity is a core concept from
+I used the suffix Entity to emphasize that a **UserEntity** is a core concept from
 where a set of models is born. The listed user models are the objects managed
 by the views and controllers, these might not even have access the central
 entity, although most of them will likely share the same id.
@@ -63,9 +63,9 @@ database and use Rabl, jbuilder... as a secondary API ORM of the same Entity.
 
 4. Since your controller and views deals directly with user models that have no
    corelation with your database, it will be easier replacing the storage of
-your UserEntity. You might move users out of your central database into Redis,
+your **UserEntity**. You might move users out of your central database into Redis,
 an external micro service or anything that requires a different ORM.  Even if
-your attributes are defined in a new different way, your models not.  They are
+your attributes are defined in a new different way, your models will not. They are
 like plain structures less concerned about coercion and storage representation.
 
 ## A ROM Solution
@@ -75,7 +75,7 @@ a plain object mapper and wrap your existing code base into a custom
 **UserRepository** 
 
 ROM does have the concept of repository, but depending on your architecture you
-might prefer your repositories has POROs that are heavily modified without
+might prefer your repositories as POROs that are heavily modified without
 knowledge of ROM and wrap existing ORMs that you are more familiar with.
 
 This repository can fetch a single UserEntity by id, but each query will return

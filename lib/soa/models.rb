@@ -25,6 +25,8 @@ end
 
 # Proyection of Customer
 #
+# TODO: also http://en.wikipedia.org/wiki/Model_View_ViewModel
+#
 # Properties shown in each row of a table of 'Customer' objects
 #
 # This is not always one result of Customer.all, in a CQRS style this might be

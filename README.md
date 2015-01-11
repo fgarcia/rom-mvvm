@@ -8,7 +8,7 @@ alternative database ORM, but as a model mapper tool for a MVVM architecture.
 
 Normally the first class to grow fat is the User class. In MVVM it is common 
 to have one central class representing users but several model views of them.
-As an example, given a central UserEntity class, we might need several related
+As an example, given a central **UserEntity** class, we might need several related
 model representations like:
 
     UserLoginModel
@@ -37,13 +37,13 @@ these objects as ViewModels.
 In Rails we got used that to a central god User class defining validations. In
 MVVM those are distributed among different models. Therefore you can isolate
 different sets of validations on the models that target their specific use
-case. You will still use validations in your central UserEntity for state
+case. You will still use validations in your central **UserEntity** for state
 validations, but now you can isolate input validations that are only related to
 one form.
 
 The use of ActiveRecord patterns tends to make a single database table or
 document out of the User class. With MVVM your user models will not depend on
-how UserEntity is stored:
+how **UserEntity** is stored:
 
 1. **UserLoginModel** is related to a single form and solves in a more elegant
    way the security issues that Rails 4 tries to cover with strong parameters.
@@ -51,8 +51,8 @@ Technically it is just a temporal value object that needs no storage, but is
 useful to communicate with Service objects.
 
 2. **UserSummaryModel** is a reduced set of fields out of the central
-   UserEntity, like the ones we need for a table with one row per user. This
-might be such a frequent visualization of the UserEntity that we might want to
+   **UserEntity**, like the ones we need for a table with one row per user. This
+might be such a frequent visualization of the **UserEntity** that we might want to
 optimize performance with an index. This model can be generated directly out of
 the index view without mapping out of the database lots of heavy full blown
 entity objects.
@@ -78,7 +78,7 @@ ROM does have the concept of repository, but depending on your architecture you
 might prefer your repositories as POROs that are heavily modified without
 knowledge of ROM and wrap existing ORMs that you are more familiar with.
 
-This repository can fetch a single UserEntity by id, but each query will return
+This repository can fetch a single **UserEntity** by id, but each query will return
 a different kind of model.
 
 (

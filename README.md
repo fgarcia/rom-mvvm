@@ -1,8 +1,9 @@
-# ROM for MVVM programming
+# ROM for MVVM
 
 In the traditional MVC Rails way, ActiveRecord models tend to easily grow fat
 and leak database concerns. This example shows how to use ROM not as an
-alternative database ORM, but as a model mapper tool for a MVVM architecture.
+alternative database ORM, but as a model mapper tool for the MVVM pattern that is
+commonly used in a CQRS architecture.
 
 ## Multiple ViewModels from a core idea
 

@@ -87,7 +87,7 @@ a different kind of model.
   https://gist.github.com/fgarcia/189e2dc221fc51084780
 )
 
-## TODO - The challange
+## TODO - The challenge
 
 - Ease model definitions by inheriting limited set of attributes
 
